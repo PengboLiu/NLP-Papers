@@ -8,7 +8,7 @@
 
 [Towards Better Modeling Hierarchical Structure for Self-Attention](https://arxiv.org/abs/1909.01562) (EMNLP 2019)
 
-[An Analysis of Encoder Representations in Transformer-Based Machine Translation](https://www.aclweb.org/anthology/W18-5431/) (EMNLP2018)
+[An Analysis of Encoder Representations in Transformer-Based Machine Translation](https://www.aclweb.org/anthology/W18-5431/) (EMNLP 2018)
 
 [How Much Attention Do You Need? A Granular Analysis of Neural Machine Translation Architectures？](https://link.zhihu.com/?target=https%3A//www.aclweb.org/anthology/P18-1167)（ACL 2018)
 
