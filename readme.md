@@ -1,5 +1,9 @@
 ### Transformer & Attention
 
+[Multi-Granularity Self-Attention for Neural Machine Translation](https://arxiv.org/abs/1909.02222) (EMNLP 2019)
+
+[Tree Transformer  Integrating Tree Structures into Self-Attention](https://arxiv.org/abs/1909.06639) (EMNLP  2019)
+
 [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](https://arxiv.org/abs/1905.09418) (ACL 2019)
 
 [Self-Attention with Structural Position Representations](https://arxiv.org/abs/1909.00383) (EMNLP 2019)
