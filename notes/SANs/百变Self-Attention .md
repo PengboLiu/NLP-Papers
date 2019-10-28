@@ -4,11 +4,21 @@
 
 #### 导读
 
-维护了一个NLP论文集仓库：<https://github.com/PengboLiu/NLP-Papers>
+> *维护了一个NLP论文集仓库：<https://github.com/PengboLiu/NLP-Papers>*
 
-**本文中，self-attention networks简记为SANs**
+首先简单讲一下Self Attention。
 
-首先是EMNLP 2019中，腾讯AI LAB的三篇关于SANs的论文。
+Self Attention原本是Transformer中的一个结构，现在很多时候也被单独拿出来作为一个特征抽取器。输入是一个Query向量，一个Key向量和一个Value向量。在Self Attention中，三者相同。$d_k$ 是模型维度。
+$$
+\text { Attention }(Q, K, V)=\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{d_{k}}}\right) V
+$$
+如果是Multi-Head Attention，那就把多个Attention拼在一起。
+$$
+\text { MultiHead }\left.(Q, K, V)=\text { Concat (head_ }_{1}, \ldots, \text { head_ }\right) W^{O}
+$$
+简单粗暴又有效，那么能不能对这种结构进行一些改进呢？
+
+首先是EMNLP 2019中，腾讯AI LAB的三篇关于改进SANs的论文。（本文中，Self Attention Networks简记为SANs）
 
 ------
 
@@ -40,7 +50,7 @@
 
 上一篇论文是利用Parser生成依存句法树进而改变SANs的输出，这篇论文则在SANs的结构做了一些改动，目的类似，也是为了增加句子的句法结构信息。
 
-多粒度的Self-Attention简称为MG-SA，结合多头注意力和短语建模。一方面，在多头注意力中拿出几个“头”在N元语法和句法维度对短语建模；然后，利用短语之间的相互作用增强SANs对句子结构建模的能力（还是structure modeling）。
+多粒度的Self Attention简称为MG-SA，结合多头注意力和短语建模。一方面，在多头注意力中拿出几个“头”在N元语法和句法维度对短语建模；然后，利用短语之间的相互作用增强SANs对句子结构建模的能力（还是structure modeling）。
 
 本文的motivation有两方面：
 
@@ -64,7 +74,7 @@ $$
 \mathrm{MG}-\mathrm{SA}(\mathbf{H})=\left[\mathbf{O}^{1}, \ldots, \mathbf{O}^{\mathrm{N}}\right]
 $$
 
-$ATT$ 就是经典的Self-Attention，无需多言。可以看出，主要的改动在于 $\mathbf{H}_{g}​$（文章称之为生成的短语级记忆）。计算方法也就是文章提到的“Multi-Granularity”表示：
+$ATT$ 就是经典的Self Attention，无需多言。可以看出，主要的改动在于 $\mathbf{H}_{g}$（文章称之为生成的短语级记忆）。计算方法也就是文章提到的“Multi-Granularity”表示：
 
 **多粒度表示(Multi-Granularity Representation)**
 
@@ -167,4 +177,64 @@ $$
 值得一提的是，文章还单独一节介绍了Tree Transformer中的Neighboring Attention，可以看做一种无监督的parsing，也算是意料中的收货吧。
 
 ------
+
+#### [Are Sixteen Heads Really Better than One?](https://arxiv.org/pdf/1905.10650.pdf)
+
+NeurIPS 2019的文章，来自CMU Neubig团队，一篇偏重解释性的文章。
+
+文章讨论的是SANs是不是真的需要那么多heads。讨论这件事，就需要删除掉一些heads做对比实验。head具体怎么删除呢？文章中的做法是将一些head参数矩阵置0进行mask。
+
+- **去掉一个head的影响**
+
+  ![](mask_head.png)
+  - 在WMT模型中的encoder部分，分别将其中96（16heads*6层）个单独去掉。绝大部分的head被单独去掉BLEU反而有所提升，极少数的几个（4个）去掉之后效果会稍差。论文还做了一组实验，证明了：在inference阶段，绝大部分的head被单独去掉不会对效果有什么太大影响；
+  - BERT中，同样单独去掉head，大概有50个head，在去掉其中一个的时候效果反而要好于原始bert模型。大部分的head在被单独的去掉的时候，效果不会损失太多。
+
+- **只留下一个head**
+
+  96个head去掉一个直观上一想确实不会有太大影响。作者又进一步删除掉更多的heads：在某个layer内只保留一个head。结果，无论是BERT还是NMT，对实验效果都没什么太大的影响。
+
+  需要注意的是，机器翻译中，self attention保留一个head影响不大，但是Encoder-Decoder的attention则需要更多的head。
+
+- **不同的数据集，head的重要程度相同吗？**
+
+  论文给出的答案是基本呈正相关的。这里的是去掉某个head，然后分别在两个不同的数据集（MNLI-matched和MNLI-mismatche）中进行测试，观察这个head对效果的影响是否在两个数据集的表现一致。当然，这里的实验做的可能做的不够充分。
+
+- **启发式迭代剪枝head**
+
+  那么如果想在不同层之间同时去掉一些head呢？作者给出了一种启发式的策略。
+
+$$
+\begin{array}{l}{I_{h}=\mathbb{E}_{x \sim X}\left|\frac{\partial \mathcal{L}(x)}{\partial \xi_{h}}\right|} \\ {I_{h}=\mathbb{E}_{x \sim X}\left|\operatorname{Att}_{h}(x)^{T} \frac{\partial \mathcal{L}(x)}{\partial \operatorname{Att}_{h}(x)}\right|}\end{array}
+$$
+
+​	根据求导得到的 $I_h$，每次去掉10%的head。
+
+之前知乎上有个问题： [为什么Transformer 需要进行 Multi-head Attention？](https://www.zhihu.com/question/341222779/answer/868039515)  相信这篇文章可以某种程度上回答一下此问题。当然，对head数量的探索，肯定不止于此。
+
+------
+
+#### [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](https://arxiv.org/pdf/1905.09418.pdf)
+
+对head数量剪枝的还有ACL2019的这一篇。作者十分良心，写了篇博客解释自己的论文（<https://lena-voita.github.io/posts/acl19_heads.html>）。本文的实验非常非常详尽，如果看了上一篇文章还对head剪枝感兴趣不妨先看看这篇文章对应的博客。
+
+文章的结论大概如下：
+
+- 只有一小部分头对于翻译任务似乎很重要（上一篇文章也得到了类似的结论）；
+- 重要的头有一到多个功能：位置、句法、低频词等；
+- encoder端的head很多都可以被减掉（是不是又似曾相识）；
+
+------
+
+#### 总结与思考
+
+读完几篇论文，做一个小小的总结：
+
+- 目前的Transformer结构，encoder端的head是存在冗余的，Multi-Head其实不是必须的；
+- 丢掉一些head反而能提升性能，大概有点像dropout？
+- 不同的head似乎有不同的分工；
+- 结构信息对文本建模很重要，无论是什么方法即使是Transformer；
+- 目前对SANs的改造还比较浅层，不够大刀阔斧；
+
+其实即便现在预训练语言模型方兴未艾，但是对于其依赖的多头注意力的机理还不是很清楚，还有很多相关工作没有完成。不妨让我们期待一下明年的ACL/EMNLP/NAACL上会对Transformer和SANs做出怎样的解释及改进吧！
 
