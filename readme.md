@@ -1,3 +1,7 @@
+### RNN
+
+[Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks](https://openreview.net/pdf?id=B1l6qiR5F7)  （ICLR 2019）
+
 ### Transformer & Attention
 
 [Multi-Granularity Self-Attention for Neural Machine Translation](https://arxiv.org/abs/1909.02222) (EMNLP 2019)
@@ -20,5 +24,9 @@
 
 [Single Training Dimension Selection for Word Embedding with PCA](https://arxiv.org/abs/1909.01761) (EMNLP 2019)
 
+### Neural Machine Translation
 
+[Neural Machine Translation](https://arxiv.org/abs/1709.07809) （Tutorials by Philipp Koehn）
+
+[Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473) （ICLR 2015）
 
