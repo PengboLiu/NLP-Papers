@@ -20,9 +20,21 @@
 
 [How Much Attention Do You Need? A Granular Analysis of Neural Machine Translation Architectures？](https://link.zhihu.com/?target=https%3A//www.aclweb.org/anthology/P18-1167)（ACL 2018)
 
+[Self-Attention with Relative Position Representations](https://arxiv.org/abs/1803.02155) （NAACL 2018）
+
 ### Word Embedding
 
 [Single Training Dimension Selection for Word Embedding with PCA](https://arxiv.org/abs/1909.01761) (EMNLP 2019)
+
+### Sentiment Analysis
+
+[A Novel Aspect-Guided Deep Transition Model for Aspect Based Sentiment Analysis](https://arxiv.org/pdf/1909.00324.pdf)  (EMNLP 2019)
+
+[Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks](https://arxiv.org/pdf/1909.03477.pdf)  (EMNLP 2019)
+
+[CAN: Constrained Attention Networks for Multi-Aspect Sentiment Analysis](<https://arxiv.org/pdf/1812.10735.pdf>)  (EMNLP 2019)
+
+[Syntax-Aware Aspect Level Sentiment Classification with Graph Attention Networks](https://arxiv.org/pdf/1909.02606.pdf)  (EMNLP 2019)
 
 ### Neural Machine Translation
 
