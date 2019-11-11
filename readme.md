@@ -26,6 +26,8 @@
 
 [Single Training Dimension Selection for Word Embedding with PCA](https://arxiv.org/abs/1909.01761) [EMNLP 2019]
 
+[Improving Word Embedding by Adversarial Training](https://arxiv.org/pdf/1809.06858.pdf) [NIPS 2018]
+
 ### Sentiment Analysis
 
 [A Novel Aspect-Guided Deep Transition Model for Aspect Based Sentiment Analysis](https://arxiv.org/pdf/1909.00324.pdf)  [EMNLP 2019]
