@@ -38,7 +38,7 @@ $$
 
   - 在依存树的一条边上，两个单词的绝对结构位置之差就是相对结构位置；
 
-  - 如果不在同一条边，两个单词的绝对结构位置之和乘1（两个单词在句子中正序）或-1（两个单词在句子中正序逆序）或0（同一个单词）
+  - 如果不在同一条边，两个单词的绝对结构位置之和乘1（两个单词在句子中正序）或-1（两个单词在句子中正序逆序）或0（同一个单词）；
 
 最后，序列绝对位置和结构绝对位置通过非线性函数结合在一起得到绝对位置的表示。至于相对位置，因为每个时间步的单词都不同，方法和绝对位置表示也不一样。这里，作者参考了[Self-Attention with Relative Position Representations](https://arxiv.org/pdf/1803.02155.pdf)中的方法。
 
@@ -74,7 +74,7 @@ $$
 \mathrm{MG}-\mathrm{SA}(\mathbf{H})=\left[\mathbf{O}^{1}, \ldots, \mathbf{O}^{\mathrm{N}}\right]
 $$
 
-$ATT$ 就是经典的Self Attention，无需多言。可以看出，主要的改动在于 $\mathbf{H}_{g}$（文章称之为生成的短语级记忆）。计算方法也就是文章提到的“Multi-Granularity”表示：
+$ATT$ 就是经典的Self Attention，无需多言。可以看出，主要的改动在于 $\mathbf{H}_{g}​$（文章称之为生成的短语级记忆）。计算方法也就是文章提到的“Multi-Granularity”表示：
 
 **多粒度表示(Multi-Granularity Representation)**
 

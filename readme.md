@@ -28,6 +28,10 @@
 
 [Improving Word Embedding by Adversarial Training](https://arxiv.org/pdf/1809.06858.pdf) [NIPS 2018]
 
+### Knowledge Graph Embedding
+
+[Knowledge Graph Embedding Based Question Answering](http://research.baidu.com/Public/uploads/5c1c9a58317b3.pdf) [WSDM 2019]
+
 ### Sentiment Analysis
 
 [A Novel Aspect-Guided Deep Transition Model for Aspect Based Sentiment Analysis](https://arxiv.org/pdf/1909.00324.pdf)  [EMNLP 2019]
