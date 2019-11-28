@@ -58,7 +58,17 @@
 
 ### Neural Machine Translation
 
-[Neural Machine Translation](https://arxiv.org/abs/1709.07809) （Tutorials by Philipp Koehn）
+[Neural Machine Translation](https://arxiv.org/abs/1709.07809) [Tutorials by Philipp Koehn]
 
-[Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473) （ICLR 2015）
+[Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473) [ICLR 2015]
+
+### Adversarial Attack
+
+[Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment](https://arxiv.org/pdf/1907.11932.pdf) 
+
+[AAAI 2020]
+
+[MIXUP INFERENCE: BETTER EXPLOITING MIXUP TO DEFEND ADVERSARIAL ATTACKS](https://arxiv.org/abs/1909.11515) [ICLR 2020 under review]
+
+[Smoothed Inference for Adversarially-Trained Models](https://arxiv.org/abs/1911.07198) [2020]
 
