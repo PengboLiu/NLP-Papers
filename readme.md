@@ -70,6 +70,8 @@
 
 [MIXUP INFERENCE: BETTER EXPLOITING MIXUP TO DEFEND ADVERSARIAL ATTACKS](https://arxiv.org/abs/1909.11515) [ICLR 2020 under review] 	**TODO**
 
+[On the Robustness of Self-Attentive Models](https://www.aclweb.org/anthology/P19-1147.pdf) [ACL 2019]
+
 [TEXTBUGGER: Generating Adversarial Text Against Real-world Applications](https://arxiv.org/pdf/1812.05271.pdf) [NDSS 2019]
 
 [Generating Natural Language Adversarial Examples](https://arxiv.org/pdf/1804.07998.pdf) [EMNLP 2018]
