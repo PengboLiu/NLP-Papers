@@ -64,9 +64,9 @@
 
 ### Adversarial Attack
 
-[Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment](https://arxiv.org/pdf/1907.11932.pdf) 
+[FREELB: ENHANCED ADVERSARIAL TRAINING FOR LANGUAGE UNDERSTANDING](https://arxiv.org/pdf/1909.11764.pdf) [ICLR 2020 under review]
 
-[AAAI 2020]
+[Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment](https://arxiv.org/pdf/1907.11932.pdf) [AAAI 2020]
 
 [MIXUP INFERENCE: BETTER EXPLOITING MIXUP TO DEFEND ADVERSARIAL ATTACKS](https://arxiv.org/abs/1909.11515) [ICLR 2020 under review] 	**TODO**
 
