@@ -62,7 +62,7 @@
 
 [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473) [ICLR 2015]
 
-### Adversarial Attack
+Adversarial Attack
 
 [FREELB: ENHANCED ADVERSARIAL TRAINING FOR LANGUAGE UNDERSTANDING](https://arxiv.org/pdf/1909.11764.pdf) [ICLR 2020 under review]
 
@@ -77,3 +77,9 @@
 [Generating Natural Language Adversarial Examples](https://arxiv.org/pdf/1804.07998.pdf) [EMNLP 2018]
 
 [Adversarial examples in the physical world](https://arxiv.org/pdf/1607.02533) [ICLR 2017]
+
+### CROSS-LINGUAL Word Embedding
+
+[CROSS-LINGUAL ALIGNMENT VS JOINT TRAINING: A COMPARATIVE STUDY AND A SIMPLE UNIFIED FRAMEWORK](https://arxiv.org/pdf/1910.04708.pdf)
+
+[Bilingual Lexicon Induction with Semi-supervision in Non-Isometric Embedding Spaces](https://www.aclweb.org/anthology/P19-1018) [ACL 2019]
