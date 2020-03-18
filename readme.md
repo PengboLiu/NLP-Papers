@@ -83,3 +83,5 @@
 [CROSS-LINGUAL ALIGNMENT VS JOINT TRAINING: A COMPARATIVE STUDY AND A SIMPLE UNIFIED FRAMEWORK](https://arxiv.org/pdf/1910.04708.pdf)
 
 [Bilingual Lexicon Induction with Semi-supervision in Non-Isometric Embedding Spaces](https://www.aclweb.org/anthology/P19-1018) [ACL 2019]
+
+[Unsupervised Bilingual Lexicon Induction from Mono-lingual Multimodal Data](https://arxiv.org/abs/1906.00378) (AAAI 2019)
