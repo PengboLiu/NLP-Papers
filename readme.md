@@ -1,3 +1,9 @@
+### Text Generation
+
+[Towards Faithful Neural Table-to-Text Generation with Content-Matching Constraints](https://www.aclweb.org/anthology/2020.acl-main.101/) [ACL 2020]
+
+[Long and Diverse Text Generation with Planning-based Hierarchical Variational Model](https://arxiv.org/abs/1908.06605) [EMNLP 2019]
+
 ### RNN
 
 [Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks](https://openreview.net/pdf?id=B1l6qiR5F7)  \[ICLR 2019]
@@ -33,6 +39,8 @@
 [Knowledge Graph Embedding Based Question Answering](http://research.baidu.com/Public/uploads/5c1c9a58317b3.pdf) [WSDM 2019]
 
 ### Sentiment Analysis
+
+[Relational Graph Attention Network for Aspect-based Sentiment Analysis](https://www.aclweb.org/anthology/2020.acl-main.295/) [ACL 2020]
 
 [A Novel Aspect-Guided Deep Transition Model for Aspect Based Sentiment Analysis](https://arxiv.org/pdf/1909.00324.pdf)  [EMNLP 2019]
 
