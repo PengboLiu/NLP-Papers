@@ -1,3 +1,15 @@
+### Multi-Modality NMT
+
+
+
+ [A Shared Task on Multimodal Machine Translation and Crosslingual Image Description](http://aclweb.org/anthology/W16-2346) (CMT 2016)
+
+ [Attention-based Multimodal Neural Machine Translation](https://www.aclweb.org/anthology/W16-2360) (CMT 2016)
+
+ [Doubly-Attentive Decoder for Multi-modal Neural Machine Translation](http://aclweb.org/anthology/P17-1175) (ACL 2017)
+
+ [An empirical study on the effectiveness of images in Multimodal Neural Machine Translation](http://aclweb.org/anthology/D17-1095) (ENNLP 2017)
+
 ### Text Generation
 
 [Towards Faithful Neural Table-to-Text Generation with Content-Matching Constraints](https://www.aclweb.org/anthology/2020.acl-main.101/) [ACL 2020]
@@ -93,3 +105,8 @@
 [Bilingual Lexicon Induction with Semi-supervision in Non-Isometric Embedding Spaces](https://www.aclweb.org/anthology/P19-1018) [ACL 2019]
 
 [Unsupervised Bilingual Lexicon Induction from Mono-lingual Multimodal Data](https://arxiv.org/abs/1906.00378) [AAAI 2019]
+
+### 
+
+
+
