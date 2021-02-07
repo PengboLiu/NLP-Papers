@@ -1,6 +1,4 @@
-### Multi-Modality NMT
-
-
+### Multi-Modal NMT
 
  [A Shared Task on Multimodal Machine Translation and Crosslingual Image Description](http://aclweb.org/anthology/W16-2346) (CMT 2016)
 
@@ -9,6 +7,12 @@
  [Doubly-Attentive Decoder for Multi-modal Neural Machine Translation](http://aclweb.org/anthology/P17-1175) (ACL 2017)
 
  [An empirical study on the effectiveness of images in Multimodal Neural Machine Translation](http://aclweb.org/anthology/D17-1095) (ENNLP 2017)
+
+
+
+### Summarization
+
+[Unsupervised Opinion Summarization with Content Planning](https://rktamplayo.github.io/publications/aaai21.pdf) (AAAI 2021)
 
 ### Text Generation
 
@@ -107,6 +111,3 @@
 [Unsupervised Bilingual Lexicon Induction from Mono-lingual Multimodal Data](https://arxiv.org/abs/1906.00378) [AAAI 2019]
 
 ### 
-
-
-
